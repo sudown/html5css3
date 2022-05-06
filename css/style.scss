@@ -1,0 +1,119 @@
+$primaryHtmlColor: #E44D26;
+$secondaryHtmlColor: #F16529;
+$primaryCssColor: #264DE4;
+$secondaryCssColor: #2965F1;
+$primaryJsColor: #E5A228;
+$secondaryJsColor: #F1BF26;
+$fontDefaultColor: #000000;
+$backgroundDefaultColor: #FFFFFF;
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+//Suporte em modo retrato
+#html5{
+    background-color: $secondaryHtmlColor;
+}
+
+#css{
+    background-color: $secondaryCssColor;
+}
+
+#js{
+    background-color: $secondaryJsColor;
+}
+
+header > p{
+    color: green;
+}
+//Suporte em modo paisagem ou tablet
+@media (min-width: 576px){
+    #html5{
+        background-color: $secondaryHtmlColor;
+    }
+
+    #css{
+        background-color: $secondaryCssColor;
+    }
+}
+
+//Suporte em tablet em modo paisagem
+@media (min-width: 768px){
+    #html5{
+        background-color: $secondaryHtmlColor;
+    }
+
+    #css{
+        background-color: $secondaryCssColor;
+    }
+}
+
+//Desktop
+@media (min-width: 992px){
+    #html5{
+        background-color: $secondaryHtmlColor;
+    }
+
+    #css{
+        background-color: $secondaryCssColor;
+    }
+}
+
+//Desktop alta definição HD e FHD
+@media (min-width: 1200px){
+    #html5{
+        background-color: $secondaryHtmlColor;
+    }
+
+    #css{
+        background-color: $secondaryCssColor;
+    }
+}
+
+
+
+
+
+
+
+
+/*
+//Suporte em modo retrato
+body {
+    background-color: $primaryHtmlColor;
+}
+
+//Suporte em modo paisagem ou tablet
+@media (min-width: 576px){
+    body {
+        background-color: #f58888;
+    }
+}
+
+//Suporte em tablet em modo paisagem
+@media (min-width: 768px){
+    body {
+        background-color: #ffe600;
+    }
+}
+
+//Desktop
+@media (min-width: 992px){
+    body {
+        background-color: #51ff0077;
+    }
+}
+
+//Desktop alta definição HD e FHD
+@media (min-width: 1200px){
+    body {
+        background-color: #f003a977;
+    }
+}
+*/

@@ -1,0 +1,96 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#html5 {
+  background-color: #F16529;
+}
+
+#css {
+  background-color: #2965F1;
+}
+
+#js {
+  background-color: #F1BF26;
+}
+
+header > p {
+  color: green;
+}
+
+@media (min-width: 576px) {
+  #html5 {
+    background-color: #F16529;
+  }
+  #css {
+    background-color: #2965F1;
+  }
+}
+
+@media (min-width: 768px) {
+  #html5 {
+    background-color: #F16529;
+  }
+  #css {
+    background-color: #2965F1;
+  }
+}
+
+@media (min-width: 992px) {
+  #html5 {
+    background-color: #F16529;
+  }
+  #css {
+    background-color: #2965F1;
+  }
+}
+
+@media (min-width: 1200px) {
+  #html5 {
+    background-color: #F16529;
+  }
+  #css {
+    background-color: #2965F1;
+  }
+}
+
+/*
+//Suporte em modo retrato
+body {
+    background-color: $primaryHtmlColor;
+}
+
+//Suporte em modo paisagem ou tablet
+@media (min-width: 576px){
+    body {
+        background-color: #f58888;
+    }
+}
+
+//Suporte em tablet em modo paisagem
+@media (min-width: 768px){
+    body {
+        background-color: #ffe600;
+    }
+}
+
+//Desktop
+@media (min-width: 992px){
+    body {
+        background-color: #51ff0077;
+    }
+}
+
+//Desktop alta definição HD e FHD
+@media (min-width: 1200px){
+    body {
+        background-color: #f003a977;
+    }
+}
+*/
+/*# sourceMappingURL=style.css.map */
