@@ -18,38 +18,38 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <header id="cabecalho"> <!--cabecalho-->
+    <header class="flex-conteiner-row menu"> <!--cabecalho-->
         <nav>
-        <img src="img/favicon.ico" alt="Logo HTML5, CSS3, JavaScript" >
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Links Úteis</li>
+        <img src="img/favicon.png" alt="Logo HTML5, CSS3, JavaScript" id="logo">
+            <ul class="flex-conteiner-colum">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">Links Úteis</a></li>
             </ul>
         </nav>
     </header>
-    <main>  <!--Cessão principal-->
-        <h1>Aprenda <mark id="mark-laranja">HTML5</mark>, <mark id="mark-azul">CSS3</mark> e <mark id="mark-amarelo">JavaScript</mark></h1>
-        <h2>Escrever com <mark id="mark-laranja">semântica!</mark></h2>
-        <h2>Aplicar estilos <mark id="mark-azul">modernos!</mark></h2>
-        <h2>Obter uma melhor <mark id="mark-amarelo">interação</mark></h2>
+    <main id="Destaque" class="flex-conteiner-colum">  <!--Cessão principal-->
+        <h1>Aprenda <mark class="destaqueHTML">HTML5</mark>, <mark class="destaqueCSS">CSS3</mark> e <mark class="destaqueJS">JavaScript</mark></h1>
+        <h2>Escrever com <mark class="destaqueHTML">semântica!</mark></h2>
+        <h2>Aplicar estilos <mark class="destaqueCSS">modernos!</mark></h2>
+        <h2>Obter uma melhor <mark class="destaqueJS">interação</mark></h2>
     </main>
-    <section id="html5">
+    <section>
         <img src="img/HTML5.png" alt="Logo HTML5">
         <h2>HTML5</h2>
         <h3>A HTML é a linguagem principal da web</h3>
         <p>A HTML5 modifica a forma como escrevemos código e organizamos a informação na página. Seria mais semântica com menos código. Seria mais interatividade sem a necessidade de instalação de plugins e perda de performance. É a criação de código interoperável, pronto para futuros dispositivos e que facilita a reutilização da informação de diversas formas.</p>
         <button>Saiba mais</button>
     </section>
-    <section id="css">
+    <section>
         <img src="img/CSS3.png" alt="Logo CSS3">
         <h2>CSS3</h2>
         <h3>O CSS complementa o HTML</h3>
         <p>CSS é uma linguagem de estilo, também conhecida como folhas de estilo em cascata. É usada para personalização visual de um site. Ou seja, elas servem para otimizar o conteúdo das páginas e permitir uma apresentação mais amigável para o usuário.</p>
         <button>Saiba mais</button>
     </section>
-    <section id="js">
+    <section>
         <img src="img/JS.png" alt="Logo JavaScript">
         <h2>JavaScript</h2>
         <h3>Com a HTML e o CSS, o JavaScript é uma das três principais tecnologias da web</h3>
@@ -57,7 +57,7 @@
         <button>Saiba mais</button>
 
     </section>
-    <section id="Links-Uteis">
+    <section>
         <h2>Links Úteis</h2>
         <h3>Planejamento</h3>
         <ul>
@@ -85,7 +85,7 @@
             <li><a href="https://www.w3schools.com/">W3schools</a></li>
         </ul>
     </section>
-    <footer id="rodape">
+    <footer>
         <p>© 2022 - Jobson Tenório do Nascimento</p> 
         <img src="img/WhatsApp Inc. Logo.png" alt="Logo WhatsApp">
         <img src="img/Gmail Icon.png" alt="Logo Gmail">
