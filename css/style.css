@@ -1,17 +1,18 @@
-@charset "UTF-8";
 * {
   margin: 0;
-  border: 0;
   padding: 0;
+  border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: Arial;
+  font-weight: bold;
 }
 
-* h1 h2 h3 p {
-  margin-bottom: 0.8;
+* h1, * h2, * h3, * p {
+  margin-bottom: 0.8em;
 }
 
-.flex-conteiner-row {
+.flex-container-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,7 +30,7 @@
           align-items: center;
 }
 
-.flex-conteiner-colum {
+.flex-container-column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,10 +59,134 @@
           align-items: flex-start;
 }
 
+.menu a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu li {
+  margin: 10px;
+}
+
+.menu p {
+  margin: 7vh;
+}
+
+.rodape {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #000000;
+  color: #FFFFFF;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.rodape a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.rodape ul {
+  list-style-type: none;
+}
+
+.rodape li {
+  margin: 10px;
+}
+
+.rodape p {
+  margin: 7vh;
+}
+
+.section-details {
+  width: 70vw;
+  padding: 3vw;
+}
+
+.alinharTop {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.listaDeLinks {
+  width: 30vw;
+}
+
+.listaDeLinks ul {
+  list-style-type: none;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.listaDeLinks li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.listaDeLinks img {
+  width: 50px;
+  height: 50px;
+}
+
+.listaDeLinks a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
 main, section {
   height: 75vh;
   text-align: center;
-  border: 1x solid black;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+#Destaque {
+  background: url(/img/Destaque_o20.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#HTML {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(228, 77, 38, 0.8)), to(rgba(241, 101, 41, 0.8)));
+  background: linear-gradient(90deg, rgba(228, 77, 38, 0.8) 0%, rgba(241, 101, 41, 0.8) 100%);
+}
+
+#CSS {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(38, 77, 228, 0.8)), to(rgba(41, 101, 241, 0.8)));
+  background: linear-gradient(90deg, rgba(38, 77, 228, 0.8) 0%, rgba(41, 101, 241, 0.8) 100%);
+}
+
+#JavaScript {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(229, 162, 40, 0.8)), to(rgba(241, 191, 38, 0.8)));
+  background: linear-gradient(90deg, rgba(229, 162, 40, 0.8) 0%, rgba(241, 191, 38, 0.8) 100%);
+}
+
+#LinksUteis {
+  background: -webkit-gradient(linear, left top, right top, from(#BBBBBB), to(#DDDDDD));
+  background: linear-gradient(90deg, #BBBBBB 0%, #DDDDDD 100%);
 }
 
 .botao {
@@ -74,22 +199,37 @@ main, section {
   font-weight: 900;
 }
 
-#Destaque {
-  background: url(/img/Destaque_o20.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .destaqueHTML {
   color: #E44D26;
+  font-style: normal;
 }
 
 .destaqueCSS {
   color: #264DE4;
+  font-style: normal;
 }
 
 .destaqueJS {
   color: #E5A228;
+  font-style: normal;
+}
+
+@media (orientation: landscape) {
+  #Destaque {
+    background-size: 110vw;
+  }
+  #InverterFlexBox {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+@media (orientation: portrait) {
+  #Destaque {
+    background-size: 200vw;
+  }
 }
 
 @media (min-width: 0) {
@@ -103,216 +243,151 @@ main, section {
   .menu ul {
     height: 50px;
   }
+  main, section {
+    height: 120vh;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid black;
+  }
+  p {
+    text-align: justify;
+  }
+  .listaDeLinks {
+    width: 100vw;
+    text-align: center;
+  }
+  .listaDeLinks ul {
+    list-style-type: none;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .listaDeLinks li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10px;
+    margin-left: 8vh;
+  }
+  .listaDeLinks img {
+    width: 50px;
+    height: 50px;
+  }
+  .listaDeLinks a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #000000;
+  }
+  #LinksUteis {
+    background: -webkit-gradient(linear, left top, right top, from(#BBBBBB), to(#DDDDDD));
+    background: linear-gradient(90deg, #BBBBBB 0%, #DDDDDD 100%);
+  }
+  #LinksUteis h2 {
+    text-align: center;
+  }
 }
 
-/*
-//Suporte em modo retrato
-#html5{
-    background-color: $secondaryHtmlColor;
+@media (min-width: 576px) and (orientation: portrait) {
+  #logo {
+    width: 200px;
+    height: 200px;
+  }
+  .menu {
+    height: 100px;
+  }
+  .menu ul {
+    height: 100px;
+  }
 }
 
-#css{
-    background-color: $secondaryCssColor;
+@media (min-width: 768px) {
+  #logo {
+    width: 200px;
+    height: 200px;
+  }
+  .menu {
+    height: 100px;
+  }
+  .menu ul {
+    height: 100px;
+  }
 }
 
-#js{
-    background-color: $secondaryJsColor;
+@media (min-width: 1200px) {
+  #logo {
+    width: 260px;
+    height: 260px;
+  }
+  .menu {
+    height: 130px;
+  }
+  .menu ul {
+    height: 130px;
+  }
+  main, section {
+    height: 120vh;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid black;
+  }
+  p {
+    text-align: justify;
+  }
+  .listaDeLinks {
+    width: 30vw;
+  }
+  .listaDeLinks ul {
+    list-style-type: none;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .listaDeLinks li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10px;
+  }
+  .listaDeLinks img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+  }
+  .listaDeLinks a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #000000;
+  }
+  #LinksUteis {
+    background: -webkit-gradient(linear, left top, right top, from(#BBBBBB), to(#DDDDDD));
+    background: linear-gradient(90deg, #BBBBBB 0%, #DDDDDD 100%);
+  }
+  #LinksUteis h2 {
+    text-align: center;
+  }
 }
-
-header nav{
-    color: white;
-}
-header h1 {
-    color: white;
-}
-
-footer p{
-    color: white;
-}
-
-#cabecalho {
-    background-color: #000;
-    
-}
-
-#Links-Uteis {
-    background-color: #d9d9d9;
-}
-
-#rodape {
-    background-color: #000000;
-}
-
-#mark-laranja {
-    color: #e44d26;
-    background-color: rgba(255, 255, 255, 0)
-}
-
-#mark-azul {
-    color: #294edc;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-#mark-amarelo {
-    color: #e3a22b;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-//Suporte em modo paisagem ou tablet
-@media (min-width: 576px){
-    #html5{
-        background-color: $secondaryHtmlColor;
-    }
-    
-    #css{
-        background-color: $secondaryCssColor;
-    }
-    
-    #js{
-        background-color: $secondaryJsColor;
-    }
-    
-    header nav{
-        color: white;
-    }
-    header h1 {
-        color: white;
-    }
-    
-    footer p{
-        color: white;
-    }
-    
-    #cabecalho {
-        background-color: #000;
-        
-    }
-    
-    #Links-Uteis {
-        background-color: #d9d9d9;
-    }
-    
-    #rodape {
-        background-color: #000000;
-    }
-}
-
-//Suporte em tablet em modo paisagem
-@media (min-width: 768px){
-    #html5{
-        background-color: $secondaryHtmlColor;
-    }
-    
-    #css{
-        background-color: $secondaryCssColor;
-    }
-    
-    #js{
-        background-color: $secondaryJsColor;
-    }
-    
-    header nav{
-        color: white;
-    }
-    header h1 {
-        color: white;
-    }
-    
-    footer p{
-        color: white;
-    }
-    
-    #cabecalho {
-        background-color: #000;
-        
-    }
-    
-    #Links-Uteis {
-        background-color: #d9d9d9;
-    }
-    
-    #rodape {
-        background-color: #000000;
-    }
-}
-
-//Desktop
-@media (min-width: 992px){
-    #html5{
-        background-color: rgba(255, 255, 255, 0);
-    }
-    
-    #css{
-        background-color: rgba(255, 255, 255, 0);
-    }
-    
-    #js{
-        background-color: rgba(255, 255, 255, 0);
-    }
-    
-    header nav{
-        color: white;
-    }
-    header h1 {
-        color: white;
-    }
-    
-    footer p{
-        color: white;
-    }
-    
-    #cabecalho {
-        background-color: #000;
-        
-    }
-    
-    #Links-Uteis {
-        background-color: #d9d9d9;
-    }
-    
-    #rodape {
-        background-color: #000000;
-    }
-}
-
-//Desktop alta definição HD e FHD
-@media (min-width: 1200px){
-    #html5{
-        background-color: $secondaryHtmlColor;
-    }
-    
-    #css{
-        background-color: $secondaryCssColor;
-    }
-    
-    #js{
-        background-color: $secondaryJsColor;
-    }
-    
-    header nav{
-        color: white;
-    }
-    header h1 {
-        color: white;
-    }
-    
-    footer p{
-        color: white;
-    }
-    
-    #cabecalho {
-        background-color: #000;
-        
-    }
-    
-    #Links-Uteis {
-        background-color: #d9d9d9;
-    }
-    
-    #rodape {
-        background-color: #000000;
-    }   
-    
-}
-*/
 /*# sourceMappingURL=style.css.map */

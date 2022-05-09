@@ -16,16 +16,16 @@ $gradienteJS: linear-gradient(90deg, rgba(229, 162, 40, 0.8) 0%, rgba(241, 191, 
 $gradienteLinks: linear-gradient(90deg, #BBBBBB 0%, #DDDDDD 100%);
 
 $breakpoints: (
-  xs: 0,    	//Smartphones em modo retrato
-  sm: 576px,	//Smartphones em modo paisagem ou Tablets em modo retrato
-  md: 768px,	//Tablets em modo paisagem
-  lg: 992px,	//Desktops
+  xs: 0,        //Smartphones em modo retrato
+  sm: 576px,    //Smartphones em modo paisagem ou Tablets em modo retrato
+  md: 768px,    //Tablets em modo paisagem
+  lg: 992px,    //Desktops
   xl: 1200px,   //Desktops com alta definição HD e FHD
   xxl: 2000px   //Desktops com ultra alta definição QHD e UHD
 );
 
 $colorsLikert: (
-  1: #9E2731,   	 
+  1: #9E2731,        
   2: #D41314,
   3: #C75413,    
   4: #F8CA2E,    
@@ -34,20 +34,19 @@ $colorsLikert: (
   7: #027F37   
 );
 
-
-
 *{
     margin: 0;
-    border: 0;
     padding: 0;
-    box-sizing: border-box;
-    //font-family: Arial, Helvetica, sans-serif;
-    h1 h2 h3 p {
-        margin-bottom: 0.8;
+    border: 0;
+    box-sizing: border-box; 
+    h1, h2, h3, p {
+        margin-bottom: 0.8em;
     }
+    font-family:Arial;
+    font-weight:bold;
 }
 
-.flex-conteiner-row {
+.flex-container-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -55,7 +54,7 @@ $colorsLikert: (
     align-items: center;
 }
 
-.flex-conteiner-colum {
+.flex-container-column{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -69,22 +68,105 @@ $colorsLikert: (
     color: $fontSecondaryColor;
     align-items: flex-start;
     a {
-        
+        color: $fontSecondaryColor;
+        text-decoration: none;
     }
     ul {
-
+        list-style-type: none;
     }
     li {
+        margin: 10px;
+    }
+    p {
+        margin: 7vh;
+    }
+}
 
+.rodape {
+    justify-content: space-between;
+    background-color: $backgroundSecondaryColor;
+    color: $fontSecondaryColor;
+    align-items: flex-start;
+    a {
+        color: $fontSecondaryColor;
+        text-decoration: none;
+    }
+    ul {
+        list-style-type: none;
+    }
+    li {
+        margin: 10px;
+    }
+    p {
+        margin: 7vh;
+    }
+}
+
+.section-details {
+    width: 70vw;
+    padding: 3vw;
+}
+
+.alinharTop{
+    align-items: flex-start;
+}
+
+.listaDeLinks{
+    
+    width: 30vw;
+    ul {
+        list-style-type: none;
+        align-items: flex-start;
+    }
+    li{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    img{
+        width: 50px;
+        height: 50px;
+        //border: 1px solid black;
+    }
+    a{
+        margin: 0 20px;
+        text-decoration: none;
+        color: $fontDefaultColor;
     }
 }
 
 main, section {
     height: 75vh;
     text-align: center;
-    //overflow: hidden;
-    border: 1x solid black;
+    overflow: hidden;
+    border: 1px solid black;
 }
+
+#Destaque {
+    background: url(/img/Destaque_o20.png) ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#HTML {
+    background: $gradienteHTML;
+}
+
+#CSS {
+    background: $gradienteCSS;
+}
+
+#JavaScript {
+    background: $gradienteJS;
+}
+
+#LinksUteis {
+    background: $gradienteLinks;
+}
+
 
 .botao {
     background-color: $backgroundSecondaryColor;
@@ -94,255 +176,187 @@ main, section {
     text-decoration: none;
     width: 200px;
     font-weight: 900;
-
-}
-
-#Destaque {
-    background: url(/img/Destaque_o20.png);
-    background-position: center;
-    background-repeat: no-repeat;
-
 }
 
 .destaqueHTML {
     color: $primaryHtmlColor;
+    font-style: normal;
 }
 
 .destaqueCSS {
     color: $primaryCssColor;
+    font-style: normal;
 }
 
 .destaqueJS {
     color: $primaryJsColor;
+    font-style: normal;
 }
 
+
+@media (orientation: landscape) {
+    #Destaque {
+        background-size: 110vw;
+    }
+    #InverterFlexBox{
+        flex-direction: row-reverse;
+    }
+}
+@media (orientation: portrait) {
+    #Destaque {
+        background-size: 200vw;
+    }
+}
+
+
+//Smartphones em modo retrato
 @media (min-width: map-get($breakpoints, xs)) {
     #logo {
         width: 100px;
         height: 100px;
     }
-    .menu {
+    .menu{
         height: 50px;
         ul {
             height: 50px;
         }
     }
-}
-
-@media (min-width: map-get($breakpoints, sm))  and (orientation: landscape){
-
-}
-
-@media (min-width: map-get($breakpoints, sm))  and (orientation: portrait){
-
-}
-/*
-//Suporte em modo retrato
-#html5{
-    background-color: $secondaryHtmlColor;
-}
-
-#css{
-    background-color: $secondaryCssColor;
-}
-
-#js{
-    background-color: $secondaryJsColor;
-}
-
-header nav{
-    color: white;
-}
-header h1 {
-    color: white;
-}
-
-footer p{
-    color: white;
-}
-
-#cabecalho {
-    background-color: #000;
     
+    main, section {
+        height: 120vh;
+        text-align: center;
+        overflow: hidden;
+        border: 1px solid black;
+    }
+    p {
+        text-align: justify;
+    }
+
+    .listaDeLinks{
+        width: 100vw;
+        text-align: center;
+        ul {
+            list-style-type: none;
+            align-items: flex-start;
+        }
+        li{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            margin-left: 8vh;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            //border: 1px solid black;
+        }
+        a{
+            margin: 0 20px;
+            text-decoration: none;
+            color: $fontDefaultColor;
+        }
+    }
+    #LinksUteis {
+        background: $gradienteLinks;
+        h2 {
+            text-align: center;
+        }
+    }
+
 }
 
-#Links-Uteis {
-    background-color: #d9d9d9;
-}
+// Smartphones em modo paisagem
+@media (min-width: map-get($breakpoints, sm)) and (orientation: landscape) {
 
-#rodape {
-    background-color: #000000;
 }
-
-#mark-laranja {
-    color: #e44d26;
-    background-color: rgba(255, 255, 255, 0)
+// Tablets em modo retrato
+@media (min-width: map-get($breakpoints, sm)) and (orientation: portrait) {
+    #logo {
+        width: 200px;
+        height: 200px;
+    }
+    .menu{
+        height: 100px;
+        ul {
+            height: 100px;
+        }
+    }
 }
-
-#mark-azul {
-    color: #294edc;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-#mark-amarelo {
-    color: #e3a22b;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-//Suporte em modo paisagem ou tablet
-@media (min-width: 576px){
-    #html5{
-        background-color: $secondaryHtmlColor;
+//Tablets em modo paisagem
+@media (min-width: map-get($breakpoints, md)) {
+    #logo {
+        width: 200px;
+        height: 200px;
     }
-    
-    #css{
-        background-color: $secondaryCssColor;
-    }
-    
-    #js{
-        background-color: $secondaryJsColor;
-    }
-    
-    header nav{
-        color: white;
-    }
-    header h1 {
-        color: white;
-    }
-    
-    footer p{
-        color: white;
-    }
-    
-    #cabecalho {
-        background-color: #000;
-        
-    }
-    
-    #Links-Uteis {
-        background-color: #d9d9d9;
-    }
-    
-    #rodape {
-        background-color: #000000;
+    .menu{
+        height: 100px;
+        ul {
+            height: 100px;
+        }
     }
 }
 
-//Suporte em tablet em modo paisagem
-@media (min-width: 768px){
-    #html5{
-        background-color: $secondaryHtmlColor;
-    }
-    
-    #css{
-        background-color: $secondaryCssColor;
-    }
-    
-    #js{
-        background-color: $secondaryJsColor;
-    }
-    
-    header nav{
-        color: white;
-    }
-    header h1 {
-        color: white;
-    }
-    
-    footer p{
-        color: white;
-    }
-    
-    #cabecalho {
-        background-color: #000;
-        
-    }
-    
-    #Links-Uteis {
-        background-color: #d9d9d9;
-    }
-    
-    #rodape {
-        background-color: #000000;
-    }
+//Desktops
+@media (min-width: map-get($breakpoints, lg)) {
+
+
 }
 
-//Desktop
-@media (min-width: 992px){
-    #html5{
-        background-color: rgba(255, 255, 255, 0);
+//Desktops com alta definição HD e FHD
+@media (min-width: map-get($breakpoints, xl)) {
+    #logo {
+        width: 260px;
+        height: 260px;
     }
-    
-    #css{
-        background-color: rgba(255, 255, 255, 0);
+    .menu{
+        height: 130px;
+        ul {
+            height: 130px;
+        }
     }
-    
-    #js{
-        background-color: rgba(255, 255, 255, 0);
+        main, section {
+        height: 120vh;
+        text-align: center;
+        overflow: hidden;
+        border: 1px solid black;
     }
-    
-    header nav{
-        color: white;
+    p {
+        text-align: justify;
     }
-    header h1 {
-        color: white;
-    }
-    
-    footer p{
-        color: white;
-    }
-    
-    #cabecalho {
-        background-color: #000;
-        
-    }
-    
-    #Links-Uteis {
-        background-color: #d9d9d9;
-    }
-    
-    #rodape {
-        background-color: #000000;
-    }
-}
 
-//Desktop alta definição HD e FHD
-@media (min-width: 1200px){
-    #html5{
-        background-color: $secondaryHtmlColor;
-    }
+    .listaDeLinks{
     
-    #css{
-        background-color: $secondaryCssColor;
+        width: 30vw;
+        ul {
+            list-style-type: none;
+            align-items: flex-start;
+        }
+        li{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+        a{
+            margin: 0 20px;
+            text-decoration: none;
+            color: $fontDefaultColor;
+        }
     }
-    
-    #js{
-        background-color: $secondaryJsColor;
+    #LinksUteis {
+        background: $gradienteLinks;
+        h2 {
+            text-align: center;
+        }
     }
-    
-    header nav{
-        color: white;
-    }
-    header h1 {
-        color: white;
-    }
-    
-    footer p{
-        color: white;
-    }
-    
-    #cabecalho {
-        background-color: #000;
-        
-    }
-    
-    #Links-Uteis {
-        background-color: #d9d9d9;
-    }
-    
-    #rodape {
-        background-color: #000000;
-    }   
-    
 }
-*/
