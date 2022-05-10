@@ -8,8 +8,13 @@
   font-weight: bold;
 }
 
-* h1, * h2, * h3, * p {
+* h1, * h2, * h3 {
   margin-bottom: 0.8em;
+}
+
+* p {
+  margin-bottom: 0.8em;
+  text-indent: 10%;
 }
 
 .flex-container-row {
@@ -160,7 +165,6 @@ main, section {
   height: 75vh;
   text-align: center;
   overflow: hidden;
-  border: 1px solid black;
 }
 
 #Destaque {
@@ -247,10 +251,10 @@ main, section {
     height: 120vh;
     text-align: center;
     overflow: hidden;
-    border: 1px solid black;
   }
   p {
     text-align: justify;
+    text-indent: 0px;
   }
   .listaDeLinks {
     width: 100vw;
@@ -297,6 +301,141 @@ main, section {
   #LinksUteis h2 {
     text-align: center;
   }
+  .contato {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #000000;
+    color: #FFFFFF;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contato a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .contato ul {
+    list-style-type: none;
+  }
+  .contato li {
+    margin: 10px;
+  }
+  .contato p {
+    margin-left: 13%;
+  }
+  .section-details {
+    width: 70vw;
+    padding: 3vw;
+  }
+  .alinharTop {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media (min-width: 576px) and (orientation: landscape) {
+  #logo {
+    width: 260px;
+    height: 260px;
+  }
+  .menu {
+    height: 130px;
+  }
+  .menu ul {
+    height: 130px;
+  }
+  main, section {
+    height: 60vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  p {
+    text-align: justify;
+    text-indent: 5%;
+    color: #027F37;
+  }
+  .section-details {
+    width: 60vw;
+    padding: 3vw;
+  }
+  .listaDeLinks {
+    width: 30vw;
+  }
+  .listaDeLinks ul {
+    list-style-type: none;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .listaDeLinks li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10px;
+  }
+  .listaDeLinks img {
+    width: 50px;
+    height: 50px;
+  }
+  .listaDeLinks a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000000;
+  }
+  #LinksUteis {
+    background: -webkit-gradient(linear, left top, right top, from(#BBBBBB), to(#DDDDDD));
+    background: linear-gradient(90deg, #BBBBBB 0%, #DDDDDD 100%);
+  }
+  #LinksUteis h2 {
+    text-align: center;
+  }
+  .contato {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #000000;
+    color: #FFFFFF;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contato main, .contato section {
+    height: 75vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .contato a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .contato ul {
+    list-style-type: none;
+  }
+  .contato li {
+    margin: 10px;
+  }
+  .contato p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    text-indent: 0vw;
+  }
 }
 
 @media (min-width: 576px) and (orientation: portrait) {
@@ -337,13 +476,17 @@ main, section {
     height: 130px;
   }
   main, section {
-    height: 120vh;
+    height: 130vh;
     text-align: center;
     overflow: hidden;
-    border: 1px solid black;
   }
   p {
     text-align: justify;
+    text-indent: 5%;
+  }
+  .section-details {
+    width: 60vw;
+    padding: 3vw;
   }
   .listaDeLinks {
     width: 30vw;
@@ -375,7 +518,6 @@ main, section {
   .listaDeLinks img {
     width: 50px;
     height: 50px;
-    border: 1px solid black;
   }
   .listaDeLinks a {
     margin: 0 20px;
@@ -388,6 +530,39 @@ main, section {
   }
   #LinksUteis h2 {
     text-align: center;
+  }
+  .contato {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #000000;
+    color: #FFFFFF;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contato main, .contato section {
+    height: 75vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .contato a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .contato ul {
+    list-style-type: none;
+  }
+  .contato li {
+    margin: 10px;
+  }
+  .contato p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    text-indent: 0vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
