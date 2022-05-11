@@ -224,16 +224,29 @@ main, section {
             height: 50px;
         }
     }
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 20px;
+    }
     
     main, section {
-        height: 120vh;
+        height: 70vh;
         text-align: center;
         overflow: hidden;
+        img {
+            //height: 190px;
+            //width: 190px;
+            height: 19vh;
+            width: 40vw;
+        }
         //border: 1px solid black;
     }
     p {
         text-align: justify;
         text-indent: 0px;
+        font-size: 12px;
     }
 
     .listaDeLinks{
@@ -265,6 +278,8 @@ main, section {
     }
     #LinksUteis {
         background: $gradienteLinks;
+        height: 180vh;
+        margin-top: 0vh;
         h2 {
             text-align: center;
         }
@@ -273,7 +288,8 @@ main, section {
         justify-content: space-between;
         background-color: $backgroundSecondaryColor;
         color: $fontSecondaryColor;
-        align-items: flex-start;
+        align-items:initial;
+        flex-direction: column-reverse;
         a {
             color: $fontSecondaryColor;
             text-decoration: none;
@@ -285,31 +301,40 @@ main, section {
             margin:10px;
         }
         p {
-            //text-align: justify;
+            text-align: justify;
+            font-size: 12px;
             margin-left: 13%;
+        }
+        img {
+            height: 40px;
+            width: 40px;
         }
     }
     .section-details {
-        width: 70vw;
+        width: 90vw;
         padding: 3vw;
     }
     
     .alinharTop{
         align-items: flex-start;
     }
+    header li {
+        display: none;
+    }
+
 
 }
 
 // Smartphones em modo paisagem
 @media (min-width: map-get($breakpoints, sm)) and (orientation: landscape) {
     #logo {
-        width: 260px;
-        height: 260px;
+        width: 50px;
+        height: 50px;
     }
     .menu{
-        height: 130px;
+        height: 50px;
         ul {
-            height: 130px;
+            height: 50px;
         }
     }
     main, section {
@@ -317,14 +342,19 @@ main, section {
         text-align: center;
         overflow: hidden;
         //border: 1px solid black;
+        img {
+            height: 190px;
+            width: 190px;
+        }
     }
     p {
         text-align: justify;
         text-indent: 5%;
-        color: #027F37;
+        font-size: 12px;
     }
     .section-details {
         width: 60vw;
+        //height: 60vh;
         padding: 3vw;
     }
 
@@ -389,34 +419,195 @@ main, section {
             text-indent: 0vw;   
         }
     }
+    header li {
+        display: flex;
+    }
 
 }
 // Tablets em modo retrato
 @media (min-width: map-get($breakpoints, sm)) and (orientation: portrait) {
     #logo {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
     .menu{
         height: 100px;
         ul {
             height: 100px;
         }
+    }
+    .section-details {
+        width: 80vw;
+        padding: 3vw;
+    }
+    .listaDeLinks{
+        width: 30vw;
+        ul {
+            list-style-type: none;
+            align-items: flex-start;
+        }
+        li{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        img{
+            width: 40px;
+            height:40px;
+        }
+        a{
+            margin: 0 20px;
+            text-decoration: none;
+            color: $fontDefaultColor;
+        }
+    }
+    #LinksUteis {
+        background: $gradienteLinks;
+        height: 75vh;
+        h2 {
+            text-align: center;
+        }
+    }
+    .contato {
+        justify-content: space-between;
+        background-color: $backgroundSecondaryColor;
+        color: $fontSecondaryColor;
+        align-items: flex-start;
+        flex-direction: row;
+
+        main, section {
+            height: 75vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        a {
+            color: $fontSecondaryColor;
+            text-decoration: none;
+        }
+        ul {
+            list-style-type: none;
+            
+        }
+        li {
+            margin:10px;
+            
+        }
+        p {
+            align-self: center;
+            margin-left: 2vw;
+            margin-top: 2vh;
+            text-indent: 0vw;   
+        }
+    }
+    main, section {
+        height: 40vh;
+        text-align: center;
+        overflow: hidden;
+        //border: 1px solid black;
+    }
+    section img {
+        height: 20vh;
+        width: 20vw;
+    }
+    header li {
+        display: flex;
     }
 }
 //Tablets em modo paisagem
 @media (min-width: map-get($breakpoints, md)) {
     #logo {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
     }
     .menu{
         height: 100px;
         ul {
             height: 100px;
-        }
-    
     }
+    main, section {
+        height: 130vh;
+        text-align: center;
+        overflow: hidden;
+        //border: 1px solid black;
+    }
+    p {
+        text-align: justify;
+        text-indent: 5%;
+        
+    }
+    .section-details {
+        width: 60vw;
+        padding: 3vw;
+    }
+
+    .listaDeLinks{
+        width: 30vw;
+        height: 10vh;
+        ul {
+            list-style-type: none;
+            align-items: flex-start;
+        }
+        li{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        img{
+            width: 10px;
+            height: 20px;
+        }
+        a{
+            margin: 0 20px;
+            text-decoration: none;
+            color: $fontDefaultColor;
+        }
+    }
+    #LinksUteis {
+        background: $gradienteLinks;
+        h2 {
+            text-align: center;
+        }
+    }
+    .contato {
+        justify-content: space-between;
+        background-color: $backgroundSecondaryColor;
+        color: $fontSecondaryColor;
+        align-items: flex-start;
+
+        main, section {
+            height: 75vh;
+            text-align: center;
+            overflow: hidden;
+        }
+        a {
+            color: $fontSecondaryColor;
+            text-decoration: none;
+        }
+        ul {
+            list-style-type: none;
+            
+        }
+        li {
+            margin:10px;
+            
+        }
+        p {
+            align-self: center;
+            margin-left: 2vw;
+            margin-top: 2vh;
+            text-indent: 0vw;   
+        }
+    }
+    header li {
+        display: flex;
+    }
+    
 }
 
 //Desktops
@@ -487,6 +678,7 @@ main, section {
         background-color: $backgroundSecondaryColor;
         color: $fontSecondaryColor;
         align-items: flex-start;
+        flex-direction: row;
 
         main, section {
             height: 75vh;
@@ -512,5 +704,8 @@ main, section {
             text-indent: 0vw;   
         }
     }
-
+    header li {
+        display: flex;
+    }
+}
 }

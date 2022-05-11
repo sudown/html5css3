@@ -247,14 +247,25 @@ main, section {
   .menu ul {
     height: 50px;
   }
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 20px;
+  }
   main, section {
-    height: 120vh;
+    height: 70vh;
     text-align: center;
     overflow: hidden;
+  }
+  main img, section img {
+    height: 19vh;
+    width: 40vw;
   }
   p {
     text-align: justify;
     text-indent: 0px;
+    font-size: 12px;
   }
   .listaDeLinks {
     width: 100vw;
@@ -297,6 +308,8 @@ main, section {
   #LinksUteis {
     background: -webkit-gradient(linear, left top, right top, from(#BBBBBB), to(#DDDDDD));
     background: linear-gradient(90deg, #BBBBBB 0%, #DDDDDD 100%);
+    height: 180vh;
+    margin-top: 0vh;
   }
   #LinksUteis h2 {
     text-align: center;
@@ -307,9 +320,13 @@ main, section {
             justify-content: space-between;
     background-color: #000000;
     color: #FFFFFF;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .contato a {
     color: #FFFFFF;
@@ -322,10 +339,16 @@ main, section {
     margin: 10px;
   }
   .contato p {
+    text-align: justify;
+    font-size: 12px;
     margin-left: 13%;
   }
+  .contato img {
+    height: 40px;
+    width: 40px;
+  }
   .section-details {
-    width: 70vw;
+    width: 90vw;
     padding: 3vw;
   }
   .alinharTop {
@@ -333,28 +356,35 @@ main, section {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  header li {
+    display: none;
+  }
 }
 
 @media (min-width: 576px) and (orientation: landscape) {
   #logo {
-    width: 260px;
-    height: 260px;
+    width: 50px;
+    height: 50px;
   }
   .menu {
-    height: 130px;
+    height: 50px;
   }
   .menu ul {
-    height: 130px;
+    height: 50px;
   }
   main, section {
     height: 60vh;
     text-align: center;
     overflow: hidden;
   }
+  main img, section img {
+    height: 190px;
+    width: 190px;
+  }
   p {
     text-align: justify;
     text-indent: 5%;
-    color: #027F37;
+    font-size: 12px;
   }
   .section-details {
     width: 60vw;
@@ -436,25 +466,129 @@ main, section {
     margin-top: 2vh;
     text-indent: 0vw;
   }
+  header li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media (min-width: 576px) and (orientation: portrait) {
   #logo {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
   .menu {
     height: 100px;
   }
   .menu ul {
     height: 100px;
+  }
+  .section-details {
+    width: 80vw;
+    padding: 3vw;
+  }
+  .listaDeLinks {
+    width: 30vw;
+  }
+  .listaDeLinks ul {
+    list-style-type: none;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .listaDeLinks li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10px;
+  }
+  .listaDeLinks img {
+    width: 40px;
+    height: 40px;
+  }
+  .listaDeLinks a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #000000;
+  }
+  #LinksUteis {
+    background: -webkit-gradient(linear, left top, right top, from(#BBBBBB), to(#DDDDDD));
+    background: linear-gradient(90deg, #BBBBBB 0%, #DDDDDD 100%);
+    height: 75vh;
+  }
+  #LinksUteis h2 {
+    text-align: center;
+  }
+  .contato {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #000000;
+    color: #FFFFFF;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contato main, .contato section {
+    height: 75vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .contato a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .contato ul {
+    list-style-type: none;
+  }
+  .contato li {
+    margin: 10px;
+  }
+  .contato p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    text-indent: 0vw;
+  }
+  main, section {
+    height: 40vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  section img {
+    height: 20vh;
+    width: 20vw;
+  }
+  header li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
 @media (min-width: 768px) {
   #logo {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
   .menu {
     height: 100px;
@@ -462,9 +596,104 @@ main, section {
   .menu ul {
     height: 100px;
   }
+  .menu main, .menu section {
+    height: 130vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .menu p {
+    text-align: justify;
+    text-indent: 5%;
+  }
+  .menu .section-details {
+    width: 60vw;
+    padding: 3vw;
+  }
+  .menu .listaDeLinks {
+    width: 30vw;
+    height: 10vh;
+  }
+  .menu .listaDeLinks ul {
+    list-style-type: none;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .menu .listaDeLinks li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 10px;
+  }
+  .menu .listaDeLinks img {
+    width: 10px;
+    height: 20px;
+  }
+  .menu .listaDeLinks a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #000000;
+  }
+  .menu #LinksUteis {
+    background: -webkit-gradient(linear, left top, right top, from(#BBBBBB), to(#DDDDDD));
+    background: linear-gradient(90deg, #BBBBBB 0%, #DDDDDD 100%);
+  }
+  .menu #LinksUteis h2 {
+    text-align: center;
+  }
+  .menu .contato {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #000000;
+    color: #FFFFFF;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .menu .contato main, .menu .contato section {
+    height: 75vh;
+    text-align: center;
+    overflow: hidden;
+  }
+  .menu .contato a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .menu .contato ul {
+    list-style-type: none;
+  }
+  .menu .contato li {
+    margin: 10px;
+  }
+  .menu .contato p {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    text-indent: 0vw;
+  }
+  .menu header li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) and (min-width: 1200px) {
   #logo {
     width: 260px;
     height: 260px;
@@ -540,6 +769,10 @@ main, section {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .contato main, .contato section {
     height: 75vh;
@@ -563,6 +796,11 @@ main, section {
     margin-left: 2vw;
     margin-top: 2vh;
     text-indent: 0vw;
+  }
+  header li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=style.css.map */
